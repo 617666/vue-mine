@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 3948252 */
+    src: url('http://at.alicdn.com/t/c/font_3948252_5cir4s934o8.woff2?t=1678679092576') format('woff2'),
+         url('http://at.alicdn.com/t/c/font_3948252_5cir4s934o8.woff?t=1678679092576') format('woff'),
+         url('http://at.alicdn.com/t/c/font_3948252_5cir4s934o8.ttf?t=1678679092576') format('truetype');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-flag:before {
+    content: "\e7a6";
+  }
+  
+  .icon-boom:before {
+    content: "\e69b";
+  }
+  
+  .icon-emoji-default:before {
+    content: "\e7aa";
+  }
+  
+  .icon-emoji-1:before {
+    content: "\e7af";
+  }
+  
+  .icon-emoji-fail:before {
+    content: "\e7ba";
+  }
+  
+  .icon-emoji-click:before {
+    content: "\e7c1";
+  }
+  
+  .icon-emoji-success:before {
+    content: "\e7c2";
+  }
+  

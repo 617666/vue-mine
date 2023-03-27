@@ -1,0 +1,173 @@
+body {
+    background: #eee;
+}
+
+#app {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* 使居中 */
+}
+
+.main-area {
+    --cell-size: 16px;
+    display: inline-block;
+    background-color: #c0c0c0;
+    padding: 3px;
+    box-shadow: 4px 4px 10px #777, -4px -4px 10px white;
+
+}
+
+.component-area {
+    margin: auto 5px;
+}
+
+.top-box {
+    box-shadow: 2px 2px #a0a0a0 inset, -2px -2px #ffffff inset;
+    padding: 6px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.top-box-item {
+    display: inline-block;
+}
+
+.remain-mines {
+    float: left;
+}
+
+
+
+.time {
+    float: right;
+}
+
+.restart-btn {
+    /*   position: absolute; */
+    /*   left: 0; */
+    width: 25px;
+    height: 25px;
+    border: 0px;
+    background: #c0c0c0;
+    /*   background: transparent; */
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    box-shadow: -1px -1px #808080 inset, 2px 2px white inset,
+        -2px -2px #808080 inset;
+    /*   text-align: center; */
+}
+
+.show-number {
+    width: 41px;
+    height: 25px;
+    box-shadow: -1px -1px white inset, 1px 1px #808080 inset;
+    line-height: 25px;
+    padding: 1px;
+}
+
+.game-area {
+    padding: 3px;
+    background-color: #c0c0c0;
+    box-shadow: 3px 3px #a0a0a0 inset, -3px -3px white inset;
+    margin-bottom: 6px;
+}
+
+.cell {
+    position: relative;
+    display: inline-block;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    line-height: var(--cell-size);
+    text-align: center;
+    vertical-align: middle;
+    cursor: default;
+    background-color: #c0c0c0;
+    box-shadow: -1px -1px #808080 inset, 2px 2px white inset,
+        -2px -2px #808080 inset;
+    cursor: pointer;
+}
+
+
+.row-cells {
+    font-size: 1px;
+}
+
+.num-color-0 {
+    color: darkgrey;
+}
+
+.num-color-1 {
+    color: blue;
+}
+
+.num-color-2 {
+    color: green;
+}
+
+.num-color-3 {
+    color: red;
+}
+
+.num-color-4 {
+    color: #000080;
+}
+
+.num-color-5 {
+    color: darkred;
+}
+
+.num-color-6 {
+    color: darkcyan;
+}
+
+.num-color-7 {
+    color: black;
+}
+
+.num-color-8 {
+    color: gray;
+}
+
+/* .num-color--1 {
+    background: red;
+} */
+
+.num-color--2 {
+    background: greenyellow;
+}
+
+
+.num-color {
+    position: absolute;
+    font-weight: bold;
+    line-height: var(--cell-size);
+    width: inherit;
+    height: inherit;
+    /* background: #c0c0c0;
+    box-shadow: 1px 1px #808080 inset;  */
+}
+
+.mask {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #c0c0c0;
+    box-shadow: -1px -1px #808080 inset, 2px 2px white inset,
+        -2px -2px #808080 inset;
+    z-index: 99;
+}
+
+.visited {
+    display: none;
+}
+img{
+    max-width: 60%;
+    max-height: 60%;
+    vertical-align: middle;
+}
+

@@ -1,0 +1,62 @@
+1.vue
+    this.$set(obj, key, value)          this.$set(this.cellMatrix, mineRow, [...this.cellMatrix[mineRow]]); 
+    setInterval,clearInterval
+    v-for="(row,m) in cellMatrix"
+    过滤器 filter
+
+2.css
+    position 的四个值：static、relative、absolute、fixed
+        relative：定位是相对于自身位置定位（设置偏移量的时候，会相对于自身所在的位置偏移）。设置了relative的元素仍然处在文档流中，元素的宽高不变，设置偏移量也不会影响其他元素的位置。最外层容器设置为relative定位，在没有设置宽度的情况下，宽度是整个浏览器的宽度。
+        absolute：定位是相对于离元素最近的设置了绝对或相对定位的父元素决定的，如果没有父元素设置绝对或相对定位，则元素相对于根元素即html元素定位。设置了absolute的元素脱了了文档流，元素在没有设置宽度的情况下，宽度由元素里面的内容决定。脱离后原来的位置相当于是空的，下面的元素会来占据位置。
+
+    transform: translate(-50%, -50%);
+    display: inline 与 display: inline-block
+    ！class优先级问题 top-box-item并排出现过
+    --cell-size什么东西？
+    :class (v-bind:class 的缩写) 
+    z-index 覆盖
+
+3.逻辑
+初始化容器（start按钮，时间，剩余数，表格）、初始化雷（保证第一步不踩雷）  √
+    初始化雷 √
+        得到第一个点击的格子再生成  √
+单元格赋值，初始为0，雷为1，再用DFS计算数字  √
+    不同数字 样式（颜色不同） √
+    数字0 
+        扩散 √
+        不显示
+隐藏数字 √
+
+
+开始函数
+左键
+    搜索函数（没有被访问过，点过的不能再点）
+        雷 失败 √
+        0  继续搜索 √
+        数字 显现  √
+
+右键
+    插旗（没被插过旗子，旗子没插完）√
+    取消插旗（之前是旗子）√
+
+游戏结束
+    失败---踩到雷 √
+    成功---剩余格子数==剩余雷数
+        停止计时 √
+        提示失败 √
+        按情况打开格子 √
+
+
+重新开始
+
+选择难度
+
+其他
+    标记的雷数和数字匹配时，点击数字翻开周围区域
+    二选一留到最后，可任选
+
+之前生成雷数是点一个生成一个（getbound），这里生成雷数生成。（posArr）
+
+问题：
+    1.第一次不能右击
+    2.右击
